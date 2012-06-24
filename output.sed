@@ -5,6 +5,8 @@
 # When the game just enters through normal flow, we assume no special things
 # happened, and we just have to prepare for a next move.
 
+:output_next_turn
+
 s/|/\n/g
 p
 d

@@ -6,27 +6,27 @@
 # If we win, we jump to that part of the output.
 # If we can't win, we just exit this part.
 
-# Horizontal win.
-s/OO[^|]/OOO/; t output_we_win
-s/O[^|]O/OOO/; t output_we_win
-s/[^|]OO/OOO/; t output_we_win
+# horizontal win.
+s/OO-/OOO/; t output_we_win
+s/O-O/OOO/; t output_we_win
+s/-OO/OOO/; t output_we_win
 
-# Vertical win.
-s/\(O..|O..|\).\(..\)/\1O\2/; t output_we_win
-s/\(O..|\).\(..|O..\)/\1O\2/; t output_we_win
-s/\(\).\(..|O..|O..\)/\1O\2/; t output_we_win
-s/\(.O.|.O.|.\).\(.\)/\1O\2/; t output_we_win
-s/\(.O.|.\).\(.|.O.\)/\1O\2/; t output_we_win
-s/\(.\).\(.|.O.|.O.\)/\1O\2/; t output_we_win
-s/\(..O|..O|..\).\(\)/\1O\2/; t output_we_win
-s/\(..O|..\).\(|..O\)/\1O\2/; t output_we_win
-s/\(..\).\(|..O|..O\)/\1O\2/; t output_we_win
+# vertical win.
+s/\(O..|O..|\)-\(..\)/\1O\2/; t output_we_win
+s/\(O..|\)-\(..|O..\)/\1O\2/; t output_we_win
+s/\(\)-\(..|O..|O..\)/\1O\2/; t output_we_win
+s/\(.O.|.O.|.\)-\(.\)/\1O\2/; t output_we_win
+s/\(.O.|.\)-\(.|.O.\)/\1O\2/; t output_we_win
+s/\(.\)-\(.|.O.|.O.\)/\1O\2/; t output_we_win
+s/\(..O|..O|..\)-\(\)/\1O\2/; t output_we_win
+s/\(..O|..\)-\(|..O\)/\1O\2/; t output_we_win
+s/\(..\)-\(|..O|..O\)/\1O\2/; t output_we_win
 
-# Diagonal win.
-s/\(O..|.O.|..\).\(\)/\1O\2/; t output_we_win
-s/\(O..|.\).\(.|..O\)/\1O\2/; t output_we_win
-s/\(\).\(..|.O.|..O\)/\1O\2/; t output_we_win
-s/\(..O|.O.|\).\(..\)/\1O\2/; t output_we_win
-s/\(..O|.\).\(.|O..\)/\1O\2/; t output_we_win
-s/\(..\).\(|.O.|O..\)/\1O\2/; t output_we_win
+# diagonal win.
+s/\(O..|.O.|..\)-\(\)/\1O\2/; t output_we_win
+s/\(O..|.\)-\(.|..O\)/\1O\2/; t output_we_win
+s/\(\)-\(..|.O.|..O\)/\1O\2/; t output_we_win
+s/\(..O|.O.|\)-\(..\)/\1O\2/; t output_we_win
+s/\(..O|.\)-\(.|O..\)/\1O\2/; t output_we_win
+s/\(..\)-\(|.O.|O..\)/\1O\2/; t output_we_win
 

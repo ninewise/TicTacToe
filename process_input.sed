@@ -1,4 +1,4 @@
-#!/bin/sed
+#!/bin/sed -f
 
 # First of all, initialize the game.
 
